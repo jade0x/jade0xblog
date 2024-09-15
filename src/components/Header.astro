@@ -33,16 +33,51 @@ const imagePath = "/profilepicture.jpg";
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		flex-wrap: wrap; /* Allow wrapping on smaller screens */
+	}
+	.header-frame {
+		flex: 1; /* Take up available space */
+		min-width: 200px; /* Ensure it doesn't get too narrow */
 	}
 	.img-frame {
 		width: 200px; /* Adjust as needed */
+		margin: 0 auto; /* Center the image frame */
 	}
 	#propic {
 		width: 100%;
 		height: auto;
 		border-radius: 50%; /* This makes the image circular */
+		display: block; /* Removes any inline spacing */
+		margin: 0 auto; /* Centers the image within its container */
+	}
+
+	/* Media query for mobile views */
+	@media (max-width: 768px) {
+		.header-section {
+			flex-direction: column; /* Stack elements vertically on mobile */
+			text-align: center; /* Center text on mobile */
+		}
+		.img-frame {
+			margin-top: 1em; /* Add some space between text and image on mobile */
+		}
 	}
 </style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		/** @type {HTMLImageElement | null} */
+		const img = document.getElementById('propic');
+		/** @type {HTMLParagraphElement | null} */
+		const errorMsg = document.getElementById('imageError');
+		
+		if (img && errorMsg) {
+			img.onerror = function() {
+				img.style.display = 'none';
+				errorMsg.style.display = 'block';
+			};
+		}
+	});
+</script>
 
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
