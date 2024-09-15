@@ -134,7 +134,7 @@ export default defineConfig({
       indexerToken: process.env.TINASEARCH,
       stopwordLanguages: ["eng"],
     },
-    indexBatchSize: 50,
+    indexBatchSize: 100,
     maxSearchIndexFieldLength: 100,
   },
 });
