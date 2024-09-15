@@ -3,9 +3,55 @@ import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 const imagePath = "/profilepicture.jpg";
-console.log("Image path:", imagePath);
 ---
 
 <header>
 	<div class="header-section">
 		<div class="header-frame">
+			<h1>{SITE_TITLE}</h1>
+			<h2>{SITE_DESCRIPTION}</h2>
+		</div>
+		<div class="img-frame">
+			<img id="propic" src={imagePath} alt="Your profile picture">
+			<p id="imageError" style="display: none;">Image failed to load</p>
+		</div>
+	</div>
+</header>
+<nav>
+	<HeaderLink href="/">home</HeaderLink>
+	<HeaderLink href="/posts">posts</HeaderLink>
+	<HeaderLink href="https://cassidoo.co/newsletter">etc</HeaderLink>
+</nav>
+
+<style>
+	h2 {
+		margin: 0.5em 0;
+	}
+	.header-section {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.img-frame {
+		width: 100px; /* Adjust as needed */
+	}
+	#propic {
+		width: 100%;
+		height: auto;
+		border-radius: 50%; /* This makes the image circular */
+	}
+</style>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function() {
+		var img = document.getElementById('propic');
+		var errorMsg = document.getElementById('imageError');
+		
+		if (img && errorMsg) {
+			img.onerror = function() {
+				img.style.display = 'none';
+				errorMsg.style.display = 'block';
+			};
+		}
+	});
+</script>
