@@ -1,9 +1,9 @@
-Welcome to this blog template by [cassidoo](https://cassidoo.co)!
+Hi! I'm Jade, and I'm learning to code!
 
-It's using Astro and TinaCMS. You can [clone it on GitHub](https://github.com/cassidoo/blahg) to use it for yourself, and see how it works! I would _love_ if you told me when you do use it, I love seeing variations on it!
+I'm a self-taught web developer, currently focusing on JavaScript and Python. I enjoy the process of learning how to build things with code and seeing my ideas come to life on screen.
 
-The tags at the bottom of the page are dynamically generated. The more tags you use, the more tags are added to the list! Posts are simple markdown files.
+In my free time, I like reading books, going for runs, and hanging out with my family (inc my dog Bu!). Before diving into tech, I worked in non-profit community services in a healthcare capacity.
 
-You should also check out [my newsletter](https://cassidoo.co/newsletter), or my word game [Jumblie](https://jumblie.com/?utm_campaign=blahgtmp&utm_source=github), or my [GitHub profile](https://github.com/cassidoo). Or don't. Follow your dreams.
+This blog is my way of learning in public – documenting my progress and sharing what I discover along the way. I'm interested in web development, open source projects, and using technology to make information more accessible.
 
-Enjoy!
+If you're working on interesting projects or if you're open to mentoring, I'd love to connect! You can find me on [GitHub](https://github.com/jade0x), [LinkedIn](https://www.linkedin.com/in/jade-garafola/), [Twitter](https://x.com/_jade0x_) or [Bluesky](https://jade0x.bsky.social).
