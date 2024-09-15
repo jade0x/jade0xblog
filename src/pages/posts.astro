@@ -9,7 +9,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
 // Custom title and description for the posts page
 const POSTS_PAGE_TITLE = "Jade's Blog";
-const POSTS_PAGE_DESCRIPTION = "Updates and brain dumps";
+const POSTS_PAGE_DESCRIPTION = "Writing, coding, and all that jazz";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("../posts/*.md")).sort(
@@ -23,10 +23,8 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 <html lang="en-us">
 	<BaseHead title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
 	<body>
-		<Header title={POSTS_PAGE_TITLE} />
+		<Header title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
 		<main>
-			<h1>{POSTS_PAGE_TITLE}</h1>
-			<p class="description">{POSTS_PAGE_DESCRIPTION}</p>
 			<content>
 				<ul class="posts-list">
 					{
@@ -50,15 +48,3 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 		<ColorScript />
 	</body>
 </html>
-
-<style>
-	h1 {
-		font-size: 2.5em;
-		margin-bottom: 0.5em;
-	}
-	.description {
-		font-size: 1.2em;
-		margin-bottom: 1.5em;
-		color: #666;
-	}
-</style>

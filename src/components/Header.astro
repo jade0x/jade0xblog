@@ -2,6 +2,7 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
 const imagePath = "/profilepicture.jpg";
 ---
 
@@ -10,8 +11,8 @@ const imagePath = "/profilepicture.jpg";
 <header>
 	<div class="header-section">
 		<div class="header-frame">
-			<h1>{SITE_TITLE}</h1>
-			<h2>{SITE_DESCRIPTION}</h2>
+			<h1>{title}</h1>
+			<h2>{description}</h2>
 		</div>
 		<div class="img-frame">
 			<img id="propic" src={imagePath} alt="Your profile picture">
