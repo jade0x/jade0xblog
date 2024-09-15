@@ -3,7 +3,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "http://localhost:4321",
+  site: "https://blog.jade0x.com",
   base: "/",
   integrations: [sitemap()],
   markdown: {

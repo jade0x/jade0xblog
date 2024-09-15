@@ -7,6 +7,7 @@ export default defineConfig({
   branch,
   clientId: process.env.TINACLIENTID, // Get this from tina.io
   token: process.env.TINATOKEN, // Get this from tina.io
+  siteUrl: "https://blog.jade0x.com",
 
   build: {
     outputFolder: "admin",
