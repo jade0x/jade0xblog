@@ -7,6 +7,10 @@ import ColorScript from "../components/ColorScript.astro";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
+// Custom title and description for the posts page
+const POSTS_PAGE_TITLE = "Jade's Blog";
+const POSTS_PAGE_DESCRIPTION = "Updates and brain dumps";
+
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("../posts/*.md")).sort(
 	(a, b) =>
@@ -17,10 +21,12 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 
 <!doctype html>
 <html lang="en-us">
-	<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	<BaseHead title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
 	<body>
-		<Header />
+		<Header title={POSTS_PAGE_TITLE} />
 		<main>
+			<h1>{POSTS_PAGE_TITLE}</h1>
+			<p class="description">{POSTS_PAGE_DESCRIPTION}</p>
 			<content>
 				<ul class="posts-list">
 					{
@@ -35,7 +41,7 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 			</content>
 
 			<p class="center">
-				You can also <a href="https://blahg.netlify.app/rss.xml">
+				You can also <a href="https://blog.jade0x.com/rss.xml">
 					subscribe with RSS!
 				</a>
 			</p>
@@ -44,3 +50,15 @@ const posts = (await Astro.glob("../posts/*.md")).sort(
 		<ColorScript />
 	</body>
 </html>
+
+<style>
+	h1 {
+		font-size: 2.5em;
+		margin-bottom: 0.5em;
+	}
+	.description {
+		font-size: 1.2em;
+		margin-bottom: 1.5em;
+		color: #666;
+	}
+</style>

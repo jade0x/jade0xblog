@@ -5,6 +5,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 const imagePath = "/profilepicture.jpg";
 ---
 
+<!-- @ts-nocheck -->
+
 <header>
 	<div class="header-section">
 		<div class="header-frame">
@@ -20,7 +22,6 @@ const imagePath = "/profilepicture.jpg";
 <nav>
 	<HeaderLink href="/">home</HeaderLink>
 	<HeaderLink href="/posts">posts</HeaderLink>
-	<HeaderLink href="https://cassidoo.co/newsletter">etc</HeaderLink>
 </nav>
 
 <style>
@@ -33,7 +34,7 @@ const imagePath = "/profilepicture.jpg";
 		justify-content: space-between;
 	}
 	.img-frame {
-		width: 150px; /* Adjust as needed */
+		width: 200px; /* Adjust as needed */
 	}
 	#propic {
 		width: 100%;
@@ -44,8 +45,10 @@ const imagePath = "/profilepicture.jpg";
 
 <script>
 	document.addEventListener('DOMContentLoaded', function() {
-		var img = document.getElementById('propic');
-		var errorMsg = document.getElementById('imageError');
+		/** @type {HTMLImageElement | null} */
+		const img = document.getElementById('propic');
+		/** @type {HTMLParagraphElement | null} */
+		const errorMsg = document.getElementById('imageError');
 		
 		if (img && errorMsg) {
 			img.onerror = function() {
