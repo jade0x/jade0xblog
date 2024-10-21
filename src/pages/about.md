@@ -1,6 +1,6 @@
 Hi! I'm Jade! 👋🏻
 
-I'm a self-taught web developer, currently focusing on JavaScript and Python. I enjoy learning how to bring ideas to life through coding.
+I'm a **self-taught web developer**, currently focusing on JavaScript and Python. I enjoy learning how to bring ideas to life through coding.
 
 I am a runner, bookworm, table-top gamer & Aussie living abroad. I love spending time outdoors & with my friends, family & dog, Bu!
 Before diving into tech, I worked in non-profit community services as a Case Manager, & volunteer for State Emergency Services. #SES
