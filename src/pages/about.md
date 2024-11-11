@@ -9,4 +9,4 @@ This blog is my "learning in public" journal—documenting progress & sharing th
 I have a 'side-quest' with social media: learning how we got here, algorithms, the rise & spread of misinformation online, & how our comprehension skills & attention spans are being affected.
 
 If you'd like to work together on interesting projects or if you're open to mentoring, I'd love to connect!
-You can find me on [GitHub](https://github.com/jade0x), [LinkedIn](https://www.linkedin.com/in/jade-garafola/), [Twitter](https://x.com/_jade0x_) or [Bluesky](https://jade0x.bsky.social).
+You can find me on [GitHub](https://github.com/jade0x), [LinkedIn](https://www.linkedin.com/in/jade-garafola/) or [Bluesky](https://jade0x.bsky.social).
