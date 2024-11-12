@@ -5,9 +5,11 @@ import Footer from "../components/Footer.astro";
 import ColorScript from "../components/ColorScript.astro";
 import Tags from "../components/Tags.astro";
 import getTags from "../scripts/getTags";
+import CommentSection from "../components/CommentSection.astro";
 
 const posts = await Astro.glob("../posts/*.md");
 const allTags = getTags(posts);
+const { content } = Astro.props;
 
 let {
 	content: { title, description, added, updated, tags, heroImage },
@@ -54,6 +56,7 @@ if (updated) {
 					<slot />
 				</div>
 			</article>
+{content.blueskyUri && <CommentSection uri={content.blueskyUri} />}
 		</main>
 		<Tags tags={allTags} all />
 		<Footer />
