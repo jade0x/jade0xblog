@@ -9,10 +9,8 @@ tags:
 added: 2024-11-12T14:57:58.216Z
 ---
 
-A short time ago I came across [this post](https://bsky.app/profile/emilyliu.me/post/3kveqmh5v5v2o) by [Emily](https://bsky.app/profile/emilyliu.me) and bookmarked it for future use.
+Recently, I came across [Emily's](https://bsky.app/profile/emilyliu.me) post about using [Bluesky comment sections on blog posts](https://bsky.app/profile/emilyliu.me/post/3kveqmh5v5v2o), and bookmarked it for future use.
 
-\
-In my previous life as a book-blogger, it was *beyond* frustrating writing thoughtful book reviews, and gaining 0 traction. \
-It didn't matter how many 1000 of followers I made on Instagram or TikTok, people just don't want to click through (and platforms do not love sending users outside), but were kind enough to comment and hype up the platform posts. \
-\
-Today, I tried it out!
+In my previous life as a book blogger, it was beyond frustrating writing thoughtful book reviews and gaining zero traction. It didn't matter how many thousands of followers I made on Instagram or TikTok—people just don't want to click through (and platforms do not love sending users outside), but were kind enough to comment and hype up the platform posts.
+
+Being able to see that engagement directly on my blog and my share post feels like the dopamine hit I need. Today, I tried it out!
