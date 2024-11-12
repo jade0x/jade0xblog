@@ -9,8 +9,10 @@ tags:
 added: 2024-11-12T14:57:58.216Z
 ---
 
-A short time ago I came across this post from
+A short time ago I came across [this post](https://bsky.app/profile/emilyliu.me/post/3kveqmh5v5v2o) by [Emily ](https://bsky.app/profile/emilyliu.me)and bookmarked it for future use.
 
-```js
-<blockquote class="bluesky-embed" data-bluesky-uri="at://did:plc:vjug55kidv6sye7ykr5faxxn/app.bsky.feed.post/3kveqmh5v5v2o" data-bluesky-cid="bafyreidmeczkesblkaqjt2rh3jmgc4uhhqbz7v5oo5dntjr6u2mpysyqqy"><p lang="en">i&#x27;m now using bluesky replies as the comments section on my personal blog!i didn&#x27;t need to auth/use an API key to fetch the replies. benefits of an open network 🫡🤝check it out at the bottom of this blog post: emilyliu.me/blog/bluesky...<br><br><a href="https://bsky.app/profile/did:plc:vjug55kidv6sye7ykr5faxxn/post/3kveqmh5v5v2o?ref_src=embed">[image or embed]</a></p>&mdash; Emily (<a href="https://bsky.app/profile/did:plc:vjug55kidv6sye7ykr5faxxn?ref_src=embed">@emilyliu.me</a>) <a href="https://bsky.app/profile/did:plc:vjug55kidv6sye7ykr5faxxn/post/3kveqmh5v5v2o?ref_src=embed">June 20, 2024 at 12:28 PM</a></blockquote><script async src="https://embed.bsky.app/static/embed.js" charset="utf-8"></script>
-```
+\
+In my previous life as a book-blogger, it was *beyond* frustrating writing thoughtful book reviews, and gaining 0 traction. \
+It didn't matter how many 1000 of followers I made on Instagram or TikTok, people just don't want to click through (and platforms do not love sending users outside), but were kind enough to comment and hype up the platform posts. \
+\
+Today, I tried it out!
