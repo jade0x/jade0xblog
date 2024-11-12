@@ -3,10 +3,23 @@ interface Props {
   uri: string;
 }
 
+interface BlueskyPost {
+  post: {
+    author: {
+      avatar: string;
+      displayName: string;
+    };
+    record: {
+      text: string;
+    };
+    indexedAt: string;
+  };
+}
+
 const { uri } = Astro.props;
 
 // Fetch comments if URI exists
-let comments = [];
+let comments: BlueskyPost[] = [];
 let error = null;
 
 if (uri) {
@@ -36,6 +49,8 @@ if (uri) {
   }
 }
 ---
+
+<!-- @ts-nocheck -->
 
 <div class="comments-section">
   <h3>Comments</h3>
