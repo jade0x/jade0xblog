@@ -6,7 +6,7 @@ description: Check out how markdown is rendered!
 tags:
   - technical
 added: 2024-05-09T00:00:00.000Z
-blueskyUri: 'https://bsky.app/profile/jade0x.dev/post/3lardkyetb22o'
+blueskyUri: 'at://did:plc:f5qcuwzgwrwe6oxfygf33pud/app.bsky.feed.post/3lardkyetb22o'
 ---
 
 This is an example blog post!
