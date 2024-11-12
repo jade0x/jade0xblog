@@ -1,0 +1,137 @@
+---
+interface Props {
+  uri: string;
+}
+
+const { uri } = Astro.props;
+
+// Fetch comments if URI exists
+let comments = [];
+let error = null;
+
+if (uri) {
+  try {
+    const response = await fetch('https://api.bsky.app/xrpc/app.bsky.feed.getPostThread', {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        uri: uri,
+        depth: 1
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to fetch comments');
+    }
+
+    const data = await response.json();
+    if (data.thread?.replies) {
+      comments = data.thread.replies;
+    }
+  } catch (e) {
+    error = e.message;
+    console.error('Error fetching comments:', e);
+  }
+}
+---
+
+<div class="comments-section">
+  <h3>Comments</h3>
+  {error && <p class="error">Error loading comments: {error}</p>}
+  
+  {!error && comments.length === 0 && (
+    <p class="no-comments">No comments yet. Join the discussion on Bluesky!</p>
+  )}
+
+  {!error && comments.length > 0 && (
+    <div class="comments-list">
+      {comments.map((reply) => (
+        <div class="comment">
+          <div class="comment-header">
+            <img 
+              src={reply.post.author.avatar} 
+              alt={`${reply.post.author.displayName}'s avatar`}
+              class="avatar"
+            />
+            <span class="author">{reply.post.author.displayName}</span>
+          </div>
+          <div class="comment-content">
+            {reply.post.record.text}
+          </div>
+          <div class="comment-footer">
+            <time datetime={reply.post.indexedAt}>
+              {new Date(reply.post.indexedAt).toLocaleDateString()}
+            </time>
+          </div>
+        </div>
+      ))}
+    </div>
+  )}
+</div>
+
+<style>
+  .comments-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #eee;
+  }
+
+  h3 {
+    margin-bottom: 1.5rem;
+  }
+
+  .comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .comment {
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+  }
+
+  .comment-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  .author {
+    font-weight: bold;
+  }
+
+  .comment-content {
+    margin: 0.5rem 0;
+    line-height: 1.5;
+  }
+
+  .comment-footer {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .error {
+    color: #e74c3c;
+    padding: 1rem;
+    background: #fdf0ed;
+    border-radius: 4px;
+  }
+
+  .no-comments {
+    text-align: center;
+    color: #666;
+    padding: 1rem;
+  }
+</style>
+
