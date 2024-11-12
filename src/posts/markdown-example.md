@@ -2,11 +2,11 @@
 layout: ../layouts/BlogPost.astro
 title: Markdown Example
 slug: markdown
-description: >-
-  Check out how markdown is rendered!
+description: Check out how markdown is rendered!
 tags:
   - technical
-added: "May 09 2024"
+added: 2024-05-09T00:00:00.000Z
+blueskyUri: 'https://bsky.app/profile/jade0x.dev/post/3lardkyetb22o'
 ---
 
 This is an example blog post!
@@ -25,7 +25,7 @@ This is an example lil thingy wow look at me!
 
 ###### Heading 6
 
-I'm baby tumblr deep v franzen [umami hammock](https://google.com) scenester retro VHS, pop-up truffaut tacos polaroid gochujang. Jean ugh _vexillologist snackwave keytar williamsburg bitters pinterest_. Photo booth schlitz quinoa tbh edison bulb vexillologist occupy single-origin dreamcatcher. **Chartreuse meggings gochujang synth.** Narwhal green juice snackwave thundercats kickstarter XOXO deep v.
+I'm baby tumblr deep v franzen [umami hammock](https://google.com) scenester retro VHS, pop-up truffaut tacos polaroid gochujang. Jean ugh *vexillologist snackwave keytar williamsburg bitters pinterest*. Photo booth schlitz quinoa tbh edison bulb vexillologist occupy single-origin dreamcatcher. **Chartreuse meggings gochujang synth.** Narwhal green juice snackwave thundercats kickstarter XOXO deep v.
 
 1. numbered
 2. list
@@ -34,24 +34,24 @@ I'm baby tumblr deep v franzen [umami hammock](https://google.com) scenester ret
 
 Hello there, welcome to my list.
 
-- list
-- of
-- items
-  - nested
-  - list
-- wow
+* list
+* of
+* items
+  * nested
+  * list
+* wow
 
 ## Hello, babies, I think that you need to understand what a long line length is
 
 V franzen umami hammock scenester retro VHS, pop-up truffaut tacos polaroid heirloom gochujang.
 
-- [x] hello
-- [ ] these
-- [x] are
-- [ ] tasks
+* hello
+* these
+* are
+* tasks
 
-**bold** _italic_
-**_bold and italic_**
+**bold** *italic*
+***bold and italic***
 
 ```js
 // This is an example of some React
@@ -87,7 +87,7 @@ useEffect(() => { // wow
 
 A horizontal line:
 
----
+***
 
 Some inline `code` between normal text
 
@@ -95,7 +95,7 @@ Some inline `code` between normal text
 
 Just some normal text, wow.
 
----
+***
 
 | Example table | Example things |
 | ------------- | -------------- |
