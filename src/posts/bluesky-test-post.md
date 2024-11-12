@@ -9,7 +9,7 @@ tags:
 added: 2024-11-12T14:57:58.216Z
 ---
 
-A short time ago I came across [this post](https://bsky.app/profile/emilyliu.me/post/3kveqmh5v5v2o) by [Emily ](https://bsky.app/profile/emilyliu.me)and bookmarked it for future use.
+A short time ago I came across [this post](https://bsky.app/profile/emilyliu.me/post/3kveqmh5v5v2o) by [Emily](https://bsky.app/profile/emilyliu.me) and bookmarked it for future use.
 
 \
 In my previous life as a book-blogger, it was *beyond* frustrating writing thoughtful book reviews, and gaining 0 traction. \
