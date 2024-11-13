@@ -8,27 +8,31 @@ interface BlueskyPost {
     author: {
       avatar: string;
       displayName: string;
+      handle: string;
     };
     record: {
       text: string;
     };
     indexedAt: string;
+    likeCount: number;
+    repostCount: number;
+    replyCount: number;
   };
+  replies?: BlueskyPost[];
 }
 
 const { uri } = Astro.props;
 
-// Fetch comments if URI exists
+// Get the post ID for the Bluesky link
+const postId = uri.split('/').pop();
+const blueskyLink = `https://bsky.app/profile/${uri.split('/')[2]}/post/${postId}`;
+
 let comments: BlueskyPost[] = [];
 let error = null;
 
 if (uri) {
   try {
-    // URL encode the URI and add it as a query parameter
-    const encodedUri = encodeURIComponent(uri);
-    const url = `https://api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodedUri}`;
-    
-    const response = await fetch(url, {
+    const response = await fetch(`https://api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodeURIComponent(uri)}`, {
       method: 'GET',
       headers: {
         'Accept': 'application/json'
@@ -36,7 +40,7 @@ if (uri) {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to fetch comments');
+      throw new Error(`Failed to fetch comments: ${response.status}`);
     }
 
     const data = await response.json();
@@ -45,41 +49,75 @@ if (uri) {
     }
   } catch (e) {
     error = e.message;
-    console.error('Error fetching comments:', e);
+    console.error('Error:', e);
   }
 }
 ---
 
-<!-- @ts-nocheck -->
-
 <div class="comments-section">
-  <h3>Comments</h3>
+  <h2>Comments</h2>
+  <p class="comment-prompt">
+    Reply on Bluesky <a href={blueskyLink} target="_blank" rel="noopener noreferrer">here</a> to join the conversation.
+  </p>
+  
   {error && <p class="error">Error loading comments: {error}</p>}
   
   {!error && comments.length === 0 && (
-    <p class="no-comments">No comments yet. Join the discussion on Bluesky!</p>
+    <p class="no-comments">No comments yet. Be the first to comment!</p>
   )}
 
   {!error && comments.length > 0 && (
     <div class="comments-list">
-      {comments.map((reply) => (
-        <div class="comment">
+      {comments.map((comment, index) => (
+        <div class={`comment ${comment.replies?.length ? 'has-replies' : ''}`}>
           <div class="comment-header">
-            <img 
-              src={reply.post.author.avatar} 
-              alt={`${reply.post.author.displayName}'s avatar`}
-              class="avatar"
-            />
-            <span class="author">{reply.post.author.displayName}</span>
+            <img src={comment.post.author.avatar} alt={`${comment.post.author.displayName}'s avatar`} class="avatar" />
+            <div class="author-info">
+              <span class="author-name">{comment.post.author.displayName}</span>
+              <span class="author-handle">@{comment.post.author.handle}</span>
+            </div>
           </div>
           <div class="comment-content">
-            {reply.post.record.text}
+            {comment.post.record.text}
           </div>
           <div class="comment-footer">
-            <time datetime={reply.post.indexedAt}>
-              {new Date(reply.post.indexedAt).toLocaleDateString()}
+            <div class="interaction-counts">
+              <span title="Replies">{comment.post.replyCount || 0} 💬</span>
+              <span title="Reposts">{comment.post.repostCount || 0} 🔁</span>
+              <span title="Likes">{comment.post.likeCount || 0} ❤️</span>
+            </div>
+            <time datetime={comment.post.indexedAt}>
+              {new Date(comment.post.indexedAt).toLocaleDateString()}
             </time>
           </div>
+          {comment.replies && comment.replies.length > 0 && (
+            <div class="replies">
+              {comment.replies.map((reply) => (
+                <div class="reply comment">
+                  <div class="comment-header">
+                    <img src={reply.post.author.avatar} alt={`${reply.post.author.displayName}'s avatar`} class="avatar" />
+                    <div class="author-info">
+                      <span class="author-name">{reply.post.author.displayName}</span>
+                      <span class="author-handle">@{reply.post.author.handle}</span>
+                    </div>
+                  </div>
+                  <div class="comment-content">
+                    {reply.post.record.text}
+                  </div>
+                  <div class="comment-footer">
+                    <div class="interaction-counts">
+                      <span title="Replies">{reply.post.replyCount || 0} 💬</span>
+                      <span title="Reposts">{reply.post.repostCount || 0} 🔁</span>
+                      <span title="Likes">{reply.post.likeCount || 0} ❤️</span>
+                    </div>
+                    <time datetime={reply.post.indexedAt}>
+                      {new Date(reply.post.indexedAt).toLocaleDateString()}
+                    </time>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       ))}
     </div>
@@ -90,12 +128,30 @@ if (uri) {
   .comments-section {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid #eee;
+    border-top: 1px solid var(--gray);
+    font-size: 0.9rem;
   }
 
-  h3 {
-    margin-bottom: 1.5rem;
+  h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
   }
+
+  .comment-prompt {
+    margin-bottom: 2rem;
+    color: var(--gray);
+  }
+
+  .comment-prompt a {
+    color: var(--black);
+    text-decoration: underline;
+  }
+  /* Add this dark mode style */
+@media (prefers-color-scheme: dark) {
+    .comment-prompt a {
+        color: var(--white);
+    }
+}
 
   .comments-list {
     display: flex;
@@ -104,15 +160,27 @@ if (uri) {
   }
 
   .comment {
+    position: relative;
     padding: 1rem;
-    background: #f9f9f9;
+    background: var(--moretranswhite);
     border-radius: 8px;
+  }
+
+  .replies {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gray);
+  }
+
+  .reply {
+    margin-top: 1rem;
   }
 
   .comment-header {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin-bottom: 0.5rem;
   }
 
@@ -122,8 +190,18 @@ if (uri) {
     border-radius: 50%;
   }
 
-  .author {
-    font-weight: bold;
+  .author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .author-name {
+    font-weight: 500;
+  }
+
+  .author-handle {
+    font-size: 0.8rem;
+    color: var(--gray);
   }
 
   .comment-content {
@@ -132,21 +210,43 @@ if (uri) {
   }
 
   .comment-footer {
-    font-size: 0.9rem;
-    color: #666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--gray);
+  }
+
+  .interaction-counts {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .interaction-counts span {
+    cursor: default;
   }
 
   .error {
-    color: #e74c3c;
+    color: var(--red);
     padding: 1rem;
-    background: #fdf0ed;
+    background: var(--moretranswhite);
     border-radius: 4px;
   }
 
   .no-comments {
     text-align: center;
-    color: #666;
+    color: var(--gray);
     padding: 1rem;
   }
-</style>
 
+  @media (max-width: 600px) {
+    .comment {
+      padding: 0.75rem;
+    }
+    
+    .interaction-counts {
+      gap: 0.5rem;
+    }
+  }
+</style>
