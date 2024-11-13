@@ -6,6 +6,7 @@ description: Adding Bluesky Comments to Your Astro Blog (Using Cassidoo's Templa
 tags:
   - technical
 added: 2024-11-13T06:00:00.000Z
+blueskyUri: 'at://did:plc:f5qcuwzgwrwe6oxfygf33pud/app.bsky.feed.post/3latn7jee222c'
 ---
 
 My blog now has Bluesky comments!
