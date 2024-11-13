@@ -5,7 +5,7 @@ slug: Adding-Bluesky-Comments-to-Your-Astro-Blog
 description: Adding Bluesky Comments to Your Astro Blog (Using Cassidoo's Template)
 tags:
   - technical
-added: 2024-11-12T17:57:24.881Z
+added: 2024-11-13T06:00:00.000Z
 ---
 
 My blog now has Bluesky comments!
