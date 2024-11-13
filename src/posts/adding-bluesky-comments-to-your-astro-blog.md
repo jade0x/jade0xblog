@@ -14,7 +14,7 @@ A few months ago I came across [Emily's post about using Bluesky replies as a co
 
 I love the idea, but I use [Cassidoo's Astro blog template](https://github.com/cassidoo/blahg) (and TinaCMS), so I needed to make some adjustments.
 
-Credit Where Credit's Due
+**Credit Where Credit's Due**
 
 * [Samuel Newman](https://bsky.app/profile/did:plc:p2cp5gopk7mgjegy6wadk3ep) for the original write-up on using Bluesky's open protocol for blog comments
 * [Emily Liu](https://bsky.app/profile/emilyliu.me) for sharing her implementation
@@ -231,7 +231,7 @@ import CommentSection from "../components/CommentSection.astro";
   { content.blueskyUri && <CommentSection uri={content.blueskyUri} /> }
 ```
 
-### Using the Feature
+## Using the Feature
 
 Each time you create a blog post:
 
@@ -246,4 +246,4 @@ Each time you create a blog post:
 
 Your blog will now display any Bluesky replies to your post as comments!
 
-Feel free to customize the styling to match your blog's aesthetic, and feel free to share your blog 😀
+Feel free to customize the styling to match your blog's aesthetic, and feel free to share your blog and let me know what you think 😀
