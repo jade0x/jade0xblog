@@ -4,6 +4,8 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Post from "../components/Post.astro";
 import ColorScript from "../components/ColorScript.astro";
+import Tags from "../components/Tags.astro";
+import getTags from "../scripts/getTags";
 
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 
@@ -13,38 +15,48 @@ const POSTS_PAGE_DESCRIPTION = "Updates and brain dumps";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
 const posts = (await Astro.glob("../posts/*.md")).sort(
-	(a, b) =>
-		new Date(b.frontmatter.updated || b.frontmatter.added).valueOf() -
-		new Date(a.frontmatter.updated || a.frontmatter.added).valueOf()
+  (a, b) =>
+    new Date(b.frontmatter.updated || b.frontmatter.added).valueOf() -
+    new Date(a.frontmatter.updated || a.frontmatter.added).valueOf()
 );
+
+// Get all tags for the posts
+const tags = getTags(posts);
 ---
 
 <!doctype html>
 <html lang="en-us">
-	<BaseHead title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
-	<body>
-		<Header title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
-		<main>
-			<content>
-				<ul class="posts-list">
-					{
-						posts.map(
-							({
-								url,
-								frontmatter: { description, slug, title, tags, added: date },
-							}) => <Post {description} {date} {slug} {title} {tags} />
-						)
-					}
-				</ul>
-			</content>
+  <BaseHead title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
+  <body>
+    <Header title={POSTS_PAGE_TITLE} description={POSTS_PAGE_DESCRIPTION} />
+    <main>
+      <content>
+        <ul class="posts-list">
+          {
+            posts.map(({
+              url,
+              frontmatter: { description, slug, title, tags, added: date },
+            }) => <Post {description} {date} {slug} {title} {tags} />)
+          }
+        </ul>
+      </content>
 
-			<p class="center">
-				You can also <a href="https://blog.jade0x.com/rss.xml">
-					subscribe with RSS!
-				</a>
-			</p>
-		</main>
-		<Footer />
-		<ColorScript />
-	</body>
+      <p class="center">
+        You can also <a href="https://blog.jade0x.com/rss.xml">
+          subscribe with RSS!
+        </a>
+      </p>
+
+      <hr />
+      <Tags tags={tags} all />
+    </main>
+    <Footer />
+    <ColorScript />
+  </body>
 </html>
+
+<style>
+  .posts-list {
+    margin-bottom: 2rem;
+  }
+</style>

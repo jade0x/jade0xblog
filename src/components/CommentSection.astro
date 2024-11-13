@@ -46,7 +46,6 @@ if (uri) {
     }
 
 const data = await response.json();
-    console.log('DEBUG - Fetched data:', data); // Add just this line
     if (data.thread?.replies) {
       comments = data.thread.replies;
     }
@@ -129,11 +128,11 @@ const data = await response.json();
 
 <style>
   .comments-section {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--gray);
-    font-size: 0.9rem;
-  }
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--gray);
+  font-size: 0.9rem;
+}
 
   h2 {
     margin-bottom: 1rem;
@@ -157,34 +156,34 @@ const data = await response.json();
 }
 
   .comments-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 
-  .comment {
-    position: relative;
-    padding: 1rem;
-    background: var(--moretranswhite);
-    border-radius: 8px;
-  }
+.comment {
+  position: relative;
+  padding: 0.75rem;
+  background: var(--moretranswhite);
+  border-radius: 8px;
+}
 
-  .replies {
-    margin-left: 2rem;
-    margin-top: 1rem;
-    padding-left: 1rem;
-    border-left: 2px solid var(--gray);
-  }
+.replies {
+  margin-left: 1.5rem;
+  margin-top: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 2px solid var(--gray);
+}
 
-  .reply {
-    margin-top: 1rem;
-  }
+.reply {
+  margin-top: 0.75rem;
+}
 
   .comment-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
   }
 
   .avatar {

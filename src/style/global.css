@@ -135,7 +135,7 @@ nav a {
   font-size: 0.9375rem; /* 15px */
 }
 nav a:not(:last-child) {
-  padding: 0 12px 0 0;
+  padding: 0 24px 0 0;
 }
 
 hr {
@@ -202,6 +202,20 @@ pre {
 }
 pre > code {
   all: unset;
+  font-size: 0.9rem; /* Slightly smaller than paragraph text */
+  font-weight: 400; /* Normal weight instead of bold */
+}
+
+pre,
+code {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* For inline code */
+:not(pre) > code {
+  font-size: 0.9rem;
+  font-weight: 400;
 }
 blockquote {
   border: 1px solid var(--gray);
@@ -217,12 +231,23 @@ h1 {
 }
 
 h2 {
+  color: var(--black); /* Instead of gray */
+  font-size: 1.5rem;
   font-weight: 500;
-  font-size: 1.25rem; /* 20px */
 }
 
 h3 {
-  font-size: 1.125rem; /* 18px */
+  color: var(--black);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+/* For dark mode */
+@media (prefers-color-scheme: dark) {
+  h2,
+  h3 {
+    color: var(--white);
+  }
 }
 
 .center {

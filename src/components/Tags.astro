@@ -2,17 +2,43 @@
 const { tags, all } = Astro.props;
 ---
 
-{all && <h3 class="tag-title">View posts by tag</h3>}
-<div class=`${all && "tags"}`>
-	{
-		tags &&
-			tags.map((tag) => (
-				<>
-					<a class="tag" href={`/tag/${tag}`}>
-						#{tag}
-					</a>
-					{` `}
-				</>
-			))
-	}
+{all && <h3 class="tag-title center">View posts by tag</h3>}
+<div class={`tags ${all ? "center" : ""}`}>
+  {
+    tags &&
+      tags.map((tag) => (
+        <>
+          <a class="tag" href={`/tag/${tag}`}>
+            #{tag}
+          </a>
+          {` `}
+        </>
+      ))
+  }
 </div>
+
+<style>
+  .center {
+    text-align: center;
+  }
+
+  .tag-title {
+    margin-bottom: 1rem;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* Center alignment only when .center class is present */
+  .tags.center {
+    justify-content: center;
+  }
+
+  /* Left alignment by default */
+  .tags:not(.center) {
+    justify-content: flex-start;
+  }
+</style>
