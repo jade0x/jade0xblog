@@ -12,7 +12,7 @@ My blog now has Bluesky comments!
 
 A few months ago I came across [Emily's post about using Bluesky replies as a comment section](https://bsky.app/profile/emilyliu.me/post/3kveqmh5v5v2o), where she implemented [Samuel's method of integrating Bluesky's open protocol as a comment system.](https://graysky.app/blog/2024-02-05-adding-blog-comments)
 
-I love the idea, but I use [Cassidoo's Astro blog template](https://github.com/cassidoo/blahg) (and TinaCMS), so I needed to make some adjustments. 
+I love the idea, but I use [Cassidoo's Astro blog template](https://github.com/cassidoo/blahg) (and TinaCMS), so I needed to make some adjustments.
 
 Credit Where Credit's Due
 
@@ -237,7 +237,7 @@ Each time you create a blog post:
 
 1. Write and publish your blog post
 2. Share it on Bluesky
-3. Get the Bluesky post's URI: 
+3. Get the Bluesky post's URI:
    * Go to your Bluesky post
    * Click the timestamp to open the single post view
 4. Format the URI as: at://\[your-DID]/app.bsky.feed.post/\[post-id]
@@ -246,4 +246,4 @@ Each time you create a blog post:
 
 Your blog will now display any Bluesky replies to your post as comments!
 
-Feel free to customize the styling to match your blog's aesthetic!
+Feel free to customize the styling to match your blog's aesthetic, and feel free to share your blog 😀
