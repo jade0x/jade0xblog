@@ -45,7 +45,8 @@ if (uri) {
       throw new Error(`Failed to fetch comments: ${response.status}`);
     }
 
-    const data = await response.json();
+const data = await response.json();
+    console.log('DEBUG - Fetched data:', data); // Add just this line
     if (data.thread?.replies) {
       comments = data.thread.replies;
     }
