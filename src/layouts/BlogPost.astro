@@ -30,7 +30,7 @@ if (updated) {
 }
 
 // Define the type for our stats
-interface PostStats {
+type PostStats = {
   likeCount: number;
   repostCount: number;
   replyCount: number;
@@ -61,9 +61,6 @@ if (content.blueskyUri) {
     console.error('Error fetching stats:', e);
   }
 }
----
-
-<!-- Rest of your template remains the same -->
 ---
 
 <html lang="en-us">
