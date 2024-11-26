@@ -32,7 +32,9 @@ let error = null;
 
 if (uri) {
   try {
+    console.log('Starting fetch for comments at:', new Date().toLocaleString());
     const endpoint = `https://api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodeURIComponent(uri)}`;
+    console.log('Endpoint:', endpoint);
     
     const response = await fetch(endpoint, {
       method: 'GET',
@@ -41,17 +43,22 @@ if (uri) {
       }
     });
 
+    console.log('Response status:', response.status);
+
     if (!response.ok) {
       throw new Error(`Failed to fetch comments: ${response.status}`);
     }
 
-const data = await response.json();
+    const data = await response.json();
+    console.log('Data received:', data);
+    
     if (data.thread?.replies) {
       comments = data.thread.replies;
+      console.log('Comments loaded:', comments.length);
     }
   } catch (e) {
     error = e.message;
-    console.error('Error:', e);
+    console.error('Error fetching comments:', e);
   }
 }
 ---

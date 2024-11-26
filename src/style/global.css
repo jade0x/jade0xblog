@@ -203,19 +203,19 @@ pre {
 pre > code {
   all: unset;
   font-size: 0.9rem; /* Slightly smaller than paragraph text */
-  font-weight: 400; /* Normal weight instead of bold */
+  font-weight: 300;
 }
 
 pre,
 code {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 /* For inline code */
 :not(pre) > code {
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 300;
 }
 blockquote {
   border: 1px solid var(--gray);
