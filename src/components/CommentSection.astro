@@ -20,6 +20,31 @@ interface BlueskyPost {
   };
   replies?: BlueskyPost[];
 }
+console.log('CommentSection component is loading:', new Date().toLocaleString());
+// Retry fetch function
+async function fetchWithRetry(endpoint: string, retries = 3) {
+  for (let i = 0; i < retries; i++) {
+    try {
+      console.log(`Attempt ${i + 1} of ${retries}`);
+      const response = await fetch(endpoint, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      console.log('Response status:', response.status);
+      if (response.ok) return response;
+      console.log(`Attempt ${i + 1} failed with status:`, response.status);
+    } catch (e) {
+      console.error(`Attempt ${i + 1} failed with error:`, e);
+      if (i === retries - 1) throw e;
+      const waitTime = 1000 * (i + 1);
+      console.log(`Waiting ${waitTime}ms before retry...`);
+      await new Promise(r => setTimeout(r, waitTime));
+    }
+  }
+  throw new Error('All retry attempts failed');
+}
 
 const { uri } = Astro.props;
 
@@ -33,32 +58,27 @@ let error = null;
 if (uri) {
   try {
     console.log('Starting fetch for comments at:', new Date().toLocaleString());
-    const endpoint = `https://api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodeURIComponent(uri)}`;
+    console.log('URI being used:', uri);
+    
+    const endpoint = `https://api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodeURIComponent(uri)}&depth=1000&parentHeight=80`;
     console.log('Endpoint:', endpoint);
     
-    const response = await fetch(endpoint, {
-      method: 'GET',
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    console.log('Response status:', response.status);
-
-    if (!response.ok) {
-      throw new Error(`Failed to fetch comments: ${response.status}`);
-    }
-
-    const data = await response.json();
-    console.log('Data received:', data);
+    const response = await fetchWithRetry(endpoint);
+    const responseText = await response.text();
+    console.log('Raw response:', responseText);
+    
+    const data = JSON.parse(responseText);
+    console.log('Parsed data:', data);
     
     if (data.thread?.replies) {
       comments = data.thread.replies;
       console.log('Comments loaded:', comments.length);
+    } else {
+      console.log('No replies found in response');
     }
   } catch (e) {
     error = e.message;
-    console.error('Error fetching comments:', e);
+    console.error('Error in comment fetching:', e);
   }
 }
 ---
@@ -77,7 +97,7 @@ if (uri) {
 
   {!error && comments.length > 0 && (
     <div class="comments-list">
-      {comments.map((comment, index) => (
+      {comments.map((comment) => (
         <div class={`comment ${comment.replies?.length ? 'has-replies' : ''}`}>
           <div class="comment-header">
             <img src={comment.post.author.avatar} alt={`${comment.post.author.displayName}'s avatar`} class="avatar" />
@@ -134,12 +154,13 @@ if (uri) {
 </div>
 
 <style>
+  /* Existing styles remain the same */
   .comments-section {
-  margin-top: 1rem;
-  padding-top: 1rem;
-  border-top: 1px solid var(--gray);
-  font-size: 0.9rem;
-}
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray);
+    font-size: 0.9rem;
+  }
 
   h2 {
     margin-bottom: 1rem;
@@ -155,42 +176,42 @@ if (uri) {
     color: var(--black);
     text-decoration: underline;
   }
-  /* Add this dark mode style */
-@media (prefers-color-scheme: dark) {
+
+  @media (prefers-color-scheme: dark) {
     .comment-prompt a {
-        color: var(--white);
+      color: var(--white);
     }
-}
+  }
 
   .comments-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-.comment {
-  position: relative;
-  padding: 0.75rem;
-  background: var(--moretranswhite);
-  border-radius: 8px;
-}
+  .comment {
+    position: relative;
+    padding: 0.75rem;
+    background: var(--moretranswhite);
+    border-radius: 8px;
+  }
 
-.replies {
-  margin-left: 1.5rem;
-  margin-top: 0.75rem;
-  padding-left: 0.75rem;
-  border-left: 2px solid var(--gray);
-}
+  .replies {
+    margin-left: 1.5rem;
+    margin-top: 0.75rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid var(--gray);
+  }
 
-.reply {
-  margin-top: 0.75rem;
-}
+  .reply {
+    margin-top: 0.75rem;
+  }
 
   .comment-header {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .avatar {
