@@ -47,6 +47,14 @@ b {
   color: var(--black);
 }
 
+.gradient-text {
+  background-image: linear-gradient(45deg, #eb4888, #e9bc3f, #10a2f5);
+  background-size: 100%;
+  background-clip: text;
+  color: transparent;
+  display: inline;
+}
+
 body.dark-mode,
 body.dark-mode button,
 body.dark-mode h1,
