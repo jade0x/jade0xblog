@@ -48,7 +48,7 @@ b {
 }
 
 .gradient-text {
-  background-image: linear-gradient(45deg, #eb4888, #e9bc3f, #10a2f5);
+  background-image: linear-gradient(90deg, #eb4888, #e9bc3f, #10a2f5);
   background-size: 100%;
   background-clip: text;
   color: transparent;
