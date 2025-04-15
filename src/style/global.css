@@ -5,8 +5,18 @@
  */
 :root {
   --white: #efefef;
-  --transwhite: rgba(239, 239, 239, 0.7);
-  --moretranswhite: rgba(239, 239, 239, 0.1);
+  --transwhite: rgba(
+    250,
+    244,
+    247,
+    0.7
+  ); /*Originally rgba(239, 239, 239, 0.7)*/
+  --moretranswhite: rgba(
+    250,
+    244,
+    247,
+    0.1
+  ); /*Originally rgba(239, 239, 239, 0.1)*/
   --black: #252525;
   --transblack: rgba(37, 37, 37, 0.7);
   --moretransblack: rgba(37, 37, 37, 0.1);
