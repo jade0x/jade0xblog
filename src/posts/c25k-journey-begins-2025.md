@@ -54,6 +54,3 @@ Otherwise, just some regular old workout clothes, I have a collection of wireles
 
 To stay accountable I will be recapping my progress weekly.
 Halfway through I will commit to a 5k event and register, to keep me going to the end.
-
-```javascript
-```
