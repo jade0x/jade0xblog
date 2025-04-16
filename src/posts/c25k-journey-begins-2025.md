@@ -10,7 +10,6 @@ added: 2025-04-16T14:05:01.247Z
 
 <span class="yellow">This is not my first rodeo!</span>
 
-
 I've completed C25K maybe 4 times before, which is why I am headed back to the program for my running goals this year.
 I still haven't achieved my goal of <span class="pink">being a runner</span>. I have had seasons where I went running regularly, and then seasons where I was winded walking up the stairs. I haven't broken into a consistent phase where I moved on to 10k and beyond - which I have always wanted to do.
 
@@ -47,7 +46,7 @@ I will also be celebrating the conclusion of the program by participating in a l
 In addition to the C25K program [OG program here](https://c25k.com/c25k_plan/) &  [App version here](http://www.c25kfree.com/) , I also track my fitness with my Garmin watch & Connect app.
 This is the app I will be using to track my pace, HR etc.
 
-Otherwise, just some regular old workout clothes, I have a collection of wireless headphones, spotify/podcasts/audio books, and my [awesome Noosa Tri's|250](https://www.lauriesshoes.com/wp-content/uploads/2023/02/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.png)
+Otherwise, just some regular old workout clothes, I have a collection of wireless headphones, spotify/podcasts/audio books, and my [awesome Noosa Tri's](https://www.lauriesshoes.com/wp-content/uploads/2023/02/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.png)
 ![](/assets/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.webp)
 
 ## Accountability
