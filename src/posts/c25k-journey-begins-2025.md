@@ -32,6 +32,8 @@ I will not be modifying anything, however if I 'fail' a run (eg, cannot complete
 
 Iirc, Week 4 sucks going up to 5min runs, but Week 5 is the absolute worst. If I have to repeat any week it's that one!
 
+![](/assets/c25k-plan.png)
+
 ## Goals
 
 After completing the program, I plan to continue training, though I am undecided on how just yet.
@@ -46,7 +48,7 @@ In addition to the C25K program [OG program here](https://c25k.com/c25k_plan/) &
 This is the app I will be using to track my pace, HR etc.
 
 Otherwise, just some regular old workout clothes, I have a collection of wireless headphones, spotify/podcasts/audio books, and my [awesome Noosa Tri's|250](https://www.lauriesshoes.com/wp-content/uploads/2023/02/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.png)
-
+![](/assets/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.webp)
 
 ## Accountability
 
