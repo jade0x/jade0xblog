@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BlogPost.astro
-title: New Post
+title: My C25K Journey Begins
 slug: c25k-journey-begins-2025
 description: Dusting off my running shoes for another C25K attempt
 tags:
@@ -48,7 +48,7 @@ In addition to the C25K program [OG program here](https://c25k.com/c25k_plan/) &
 This is the app I will be using to track my pace, HR etc.
 
 Otherwise, just some regular old workout clothes, I have a collection of wireless headphones, spotify/podcasts/audio books, and my [awesome Noosa Tri's|250](https://www.lauriesshoes.com/wp-content/uploads/2023/02/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.png)
-![# Asics Women’s Noosa Tri 14 Orange Pop/Blazing Coral | 300](https://www.lauriesshoes.com/wp-content/uploads/2023/02/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.png)
+![# Asics Women’s Noosa Tri 14 Orange Pop/Blazing Coral | 300](/assetshttps://www.lauriesshoes.com/wp-content/uploads/2023/02/Asics-Womens-Noosa-Tri-14-Orange-PopBlazing-Coral.png)
 
 ## Accountability
 
