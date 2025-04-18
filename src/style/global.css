@@ -91,6 +91,20 @@ body.dark-mode nav {
   text-shadow: 1px 1px 0 var(--yellow);
 }
 
+mark {
+  background-color: var(--highlight, #e5ffc3);
+  color: var(--black);
+  padding: 0.1em 0.2em;
+  border-radius: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  mark {
+    background-color: var(--highlight, #e5ffc3);
+    color: var(--black);
+  }
+}
+
 .tag-title {
   font-weight: 400;
   color: var(--black);
