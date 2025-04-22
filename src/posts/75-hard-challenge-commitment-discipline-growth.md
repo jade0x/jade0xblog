@@ -7,7 +7,7 @@ description: >-
   finally ready to commit to this mental toughness program.
 tags:
   - personal
-added: 2025-04-16T19:20:50.713Z
+added: 2025-04-20T05:00:00.000Z
 ---
 
 I am at a point in my life where I want a big kick up the ass.
@@ -25,7 +25,7 @@ There is a lot of criticism on the program, and most of it is valid, I'm not gon
 
 ## The 75 Hard Challenge
 
-![](https://ahardenedmind.wordpress.com/wp-content/uploads/2019/12/75hard.png?w=187)
+![](/assetshttps://ahardenedmind.wordpress.com/wp-content/uploads/2019/12/75hard.png?w=187)
 
 The information on this challenge is all over the internet, so I will try to be brief.
 
