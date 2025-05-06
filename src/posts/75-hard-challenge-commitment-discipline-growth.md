@@ -5,31 +5,23 @@ slug: 75-hard-challenge-commitment-discipline-growth
 description: >-
   Taking on the 75 Hard Challenge: My honest starting point, goals, and why I'm
   finally ready to commit to this mental toughness program.
-tags:
-  - personal
-added: 2025-04-20T05:00:00.000Z
+tags: []
+added: 2025-05-06T05:00:00.000Z
 ---
 
-I am at a point in my life where I want a big kick up the ass.
-I feel that I've been on autopilot the last 2 years, and I don't want to sit back passively anymore.
+Tomorrow I embark on the <span class="pink">75 Hard Challenge</span>
+This is not my first attempt (to be honest I can't recall how many times I have attempted this), but hopefully it is my first win!
 
-The <span class="green">75 Hard Challenge</span> is something I discovered fairly early on, and have attempted it more times than I can remember (and want to admit!).
-This time, I feel that I am finally in the headspace to complete it.
+This challenge is something I have been drawn to for some time, I was introduced to it early in its creation and rise to fame, drawn to the idea of building grit and determination. I love to go all in on a project, but being consistent daily, and having a strict schedule is a huge challenge for how I operate. My default setting is pretty flexible.
 
-But why? I am one of those people who likes to go <span class="yellow">all out</span> on a goal. I like a strict guideline, and although my health is one of my main goals this year, more than anything I want to build discipline, consistency and determination. So it's time to change.
-
-The 75 Hard Challenge exploded in popularity thanks to TikTok, Instagram & YouTube. I swear the creator, Andy Frisella has popped a few blood vessels about that, as he specifically stated in this podcast episode that this was not a social media challenge. It's not a fitness challenge, its a 'mental toughness' challenge.
-Too often now, I hear it called "the tikok challenge" - face palm!!!
-
-There is a lot of criticism on the program, and most of it is valid, I'm not gonna lie. You can find it yourself, you can have your own opinions, I have mine too! I am still trying it.. again.
+I want to come out of this knowing that I can push past my own objections, stay the course on a long term goal without getting lost in the (daily) weeds, and a massive sense of accomplishment.
 
 ## The 75 Hard Challenge
 
-![](/assetshttps://ahardenedmind.wordpress.com/wp-content/uploads/2019/12/75hard.png?w=187)
+![](/assets/75hard.webp)
+Information on this challenge is all over the internet, so I will try to be brief.
 
-The information on this challenge is all over the internet, so I will try to be brief.
-
-All I ask, is if you are planning on trying this, PLEASE listen to the podcast episode and read the website. PLEASE. I see too many people 'complete' the challenge, and when they detail what they did, they clearly didn't do their due diligence, and have done it wrong.
+All I ask, is if you are planning on trying this, PLEASE listen to the podcast episode and read the website. I see too many people 'complete' the challenge, only they followed a social media checklist and did not get the full rules before starting.
 
 Podcast:
 [75 Hard A Tactical Guide to Winning the War With Yourself](https://podcasts.apple.com/us/podcast/14-75hard-a-tactical-guide-to-winning-the-war-with-yourself/id1012570406?i=1000468529541)
@@ -41,31 +33,29 @@ Website:
 ### 75 Hard Rules
 
 1. **Follow a structured diet**
-   Your choice. But no cheat meals, no alcohol. Andy has said no cookies, don't make your diet including cookies. People take issues with that, but imo that doesn't mean the diet is too strict- unless you make it that way. This is where I feel the need to specify no cheat meals comes in- Friscella comes from a bodybuilding community and they like to be super strict and binge on a cheat meal. You don't need to be killing yourself on your diet, that's why its up to you.
-   \==I am have set myself some macro goals, which I will not be disclosing. I may show it in my challenge recap- with receipts, as I am tracking everything to show my adherance.==
+   Diet is your choice. No cheat meals. No Alcohol.
+   *I have set myself a caloric and macro goal, but I will not be disclosing at this time. I also have some doctor directed goals. I will be tracking with [LoseIt!](https://www.loseit.com/%20) so I will have data.*
 2. **Two 45 minute workouts**
-   The part everyone seems to forget is that there is meant to be a 3+ hour gap between these workouts. You don't get to stack them into a 1.5hour workout. It is meant to be inconvenient! They also don't need to be hard. This is one criticism of the program, that it is too hard on the body. Again, on the podcast it is said that 2 walks a day is perfectly fine. There are no extra points for putting 200% into every single workout, just to burn out.
-   \==I am taking on the C25K running program, and I have a gym program to following. Aside from this I will do walks or yoga.==
+   2 workouts, 45 minutes each, a minimum of 3 hours apart. One must be outside. Outside means under the sky in the elements, not opening your garage door.
+   *I have a gym program for 4x days a week, and the C25K program to run. Other workouts will included walks and yoga. Again, tracking this with Garmin.*
 3. **Drink a gallon of water**
-   This gets criticism as well which I understand.
-   \==I will be drinking 1 Gallon. I find this really hard during the cold months, but as we go into summer I am ok with this. I just need to remember to space it out.==
+   This one get criticism as the goal is clearly based on gymbros and is not practical or health for everyone.
+   *I will be drinking 1 Gallon, and tracking.*
 4. **Read 10 pages**
-   Must be non-fiction, educational, improve an area of your life, and audiobooks are not allowed. I understand his logic that you must sit and focus on the book, rather than multitasking with an audiobook. I will not accept anyone making that argument that audio books "do not count as reading" f\*\*\* all the way off with that.
-   \==I have a few books lined up that I will share. ==
+   Must be non-fiction, educational, improve an area of your life, and audiobooks are not allowed. I understand his logic, he does not want anyone multitasking by using an audiobook. I will not accept anyone making that argument that audio books "do not count as reading" f\*\*\* all the way off with that.
+   *I will be using physical and eBook's for this, I will also be listening to audiobooks will I will not count to this rule, but I will add in my summary of books read.*
 5. **Take a progress picture**
-   I do not care about this one because I have no intention of sharing these. You don't see much progress day to day, so this is just an inconvenience and thing to remember. ==I will take it in my workout gear prior to my first workout. ==
+   *I don't think I will be sharing these, I do not think this one is very important because you cannot see anything daily, but whatever.
+   I will do this first thing the morning before my first workout*
 
 ### My Starting Point
 
-Presently, there is no consistency or plan with my fitness, so I would describe it as non-existent.
-Is it concerning that I am not feeling *pumped* for this challenge right now?! I am keen to do it, but I am concerned that I am not chomping at it. Maybe it will be good to approach this calmly for a change.
-I have good habits right now, they just lack consistency. This challenge will make me exercise that discipline muscle to improve my consistency.
-
-Full transparency: My worst habit by far, is scrolling my phone in bed. I have cut down on social medica significantly, as far as posting and engaging (it does wonders for your stress to disengage with the rage-bait).
-I am still a consumer, which I am fine with if I can get it out of my bed. It pushes my sleep late, which starts my day later and has a knock on effect, plus I just feel crappy from being on a screen so late.
+Currently I am inconsistent with my fitness goals and routine (working from home is pretty flexible), I have not made much progress on my current reads, regularly getting distracted with my phone instead of reading.
+I have always been good with hydration, but I predict I will be drinking more water and less other beverages to make the water goal.
 
 ### What Success Looks Like
 
-By Day 75 I want to have a steady daily routine that I fall into out of habit, a positive mindset where I embrace challenges, and to run 5km without stopping.
+By Day 75 I want to have a steady daily routine that I fall into out of habit, a positive mindset where I embrace a challenge, and to run 5km without stopping.
+I hope to have finished at least 3 books.
 
 I'll be documenting this journey right here. Expect honest reflections, challenges, victories, and hopefully some inspiration for your own journey.
