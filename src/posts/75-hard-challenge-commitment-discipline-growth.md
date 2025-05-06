@@ -5,7 +5,8 @@ slug: 75-hard-challenge-commitment-discipline-growth
 description: >-
   Taking on the 75 Hard Challenge: My honest starting point, goals, and why I'm
   finally ready to commit to this mental toughness program.
-tags: []
+tags:
+  - personal
 added: 2025-05-06T05:00:00.000Z
 ---
 
