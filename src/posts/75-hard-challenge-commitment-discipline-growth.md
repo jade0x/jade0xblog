@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/BlogPost.astro
-title: '75 Hard Challenge: Commitment, Discipline, and Growth'
+title: My 75 Hard Challenge
 slug: 75-hard-challenge-commitment-discipline-growth
 description: >-
   Taking on the 75 Hard Challenge: My honest starting point, goals, and why I'm
@@ -10,6 +10,7 @@ added: 2025-05-06T05:00:00.000Z
 ---
 
 Tomorrow I embark on the <span class="pink">75 Hard Challenge</span>
+
 This is not my first attempt (to be honest I can't recall how many times I have attempted this), but hopefully it is my first win!
 
 This challenge is something I have been drawn to for some time, I was introduced to it early in its creation and rise to fame, drawn to the idea of building grit and determination. I love to go all in on a project, but being consistent daily, and having a strict schedule is a huge challenge for how I operate. My default setting is pretty flexible.
