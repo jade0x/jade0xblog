@@ -11,9 +11,9 @@ I've been to cities that never close down,<br>
 From <span class="pink">New York</span> to Rio and old <span class="blue">London</span> town<br>
 But no matter how far or how wide I roam<br>
 <span class="yellow">I still call Australia home</span>
-</p>
 
 I'm always <span class="green">traveling</span>, I love being <span class="blue">free</span><br>
 And so I keep leaving the sun and the sea<br>
 But my heart lies waiting over the foam<br>
 <span class="yellow">I still call Australia home</span>
+</p>
